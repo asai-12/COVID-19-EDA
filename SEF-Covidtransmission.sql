@@ -68,7 +68,7 @@ GROUP BY
 
 
 
--- HDI on death and infection rates (scatterplot, looking for correlation) -- Total test per thousand -- found some descrepancies in the original data, calculated from scratch 
+-- HDI on death and infection rates -- Total test per thousand -- found some descrepancies in the original data, calculated from scratch 
 -- removed territories and countires not recongniesed by united nations by joining into another table with tthe relevant information. 
 SELECT 
 	c.location, MAX(human_development_index) AS HDI, 
