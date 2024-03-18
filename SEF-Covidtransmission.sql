@@ -68,8 +68,8 @@ GROUP BY
 
 
 
--- HDI on death and infection rates -- Total test per thousand -- found some descrepancies in the original data, calculated from scratch 
--- removed territories and countires not recongniesed by united nations by joining into another table with tthe relevant information. 
+-- HDI on death and infection rates -- Calculated Total test per thousand, found some descrepancies in the original data
+-- Removed territories and countires not recongniesed by united nations by joining into another table with Containing countries recognised by UN. 
 SELECT 
 	c.location, MAX(human_development_index) AS HDI, 
 	MAX((total_cases/population)*100) AS Infectionrates, 
@@ -87,7 +87,7 @@ ORDER BY
 	HDI DESC;
 
 
--- Top 5 countries with HDI,infection rates and testing availibilty 
+-- Top 5 countries with highest HDI,infection rates and testing availibilty 
 WITH TMS (location,HDI) AS(
 	SELECT 
 		location,
